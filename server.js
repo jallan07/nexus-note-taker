@@ -12,9 +12,6 @@ const PORT = process.env.PORT || 8080;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// storage for all saved tasks
-const saved = fs.readFile("/db/db.json");
-
 // Main route for the homepage
 app.get("/", (req, res) => {
 	res.sendFile(path.join(__dirname, "/public/index.html"));
@@ -27,7 +24,13 @@ app.get("/notes", (req, res) => {
 
 // GET `/api/notes` - Should read the `db.json` file and return all saved notes as JSON.
 app.get("/api/notes", (req, res) => {
-	res.json(saved);
+	fs.readFile("db/db.json", "utf8", (err, data) => {
+		if (err) {
+			console.log(err);
+		} else {
+			res.json(JSON.parse(data));
+		}
+	});
 });
 
 app.listen(PORT, () =>
