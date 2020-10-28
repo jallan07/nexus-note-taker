@@ -1,3 +1,12 @@
+// require jsdom so that jquery can run in a DOM environment
+var jsdom = require("jsdom");
+const { JSDOM } = jsdom;
+const { window } = new JSDOM();
+const { document } = new JSDOM("").window;
+global.document = document;
+// require jQuery library
+var $ = (jQuery = require("jquery")(window));
+
 const $noteTitle = $(".note-title");
 const $noteText = $(".note-textarea");
 const $saveNoteBtn = $(".save-note");
