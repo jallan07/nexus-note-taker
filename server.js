@@ -26,8 +26,24 @@ app.get("/notes", (req, res) => {
 app.get("/api/notes", (req, res) => {
 	fs.readFile("db/db.json", "utf8", (err, data) => {
 		if (err) {
-			console.log(err);
+			throw err;
 		} else {
+			res.json(JSON.parse(data));
+		}
+	});
+});
+
+// POST `/api/notes` - Should receive a new note to save on the request body, add it to the `db.json` file, and then return the new note to the client.
+app.post("/api/notes", (req, res) => {
+	let newNote = {
+		title: req.body.title,
+		text: req.body.text,
+	};
+	fs.appendFile("db/db.json", newNote, (err, data) => {
+		if (err) {
+			throw err;
+		} else {
+			data.push(newNote);
 			res.json(JSON.parse(data));
 		}
 	});
