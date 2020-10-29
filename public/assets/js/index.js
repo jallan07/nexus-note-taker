@@ -124,7 +124,12 @@ const renderNoteList = (notes) => {
 	};
 
 	if (notes.length === 0) {
-		noteListItems.push(create$li("No saved Notes", false));
+		noteListItems.push(
+			create$li(
+				"Congrats—you have a free day. Go read a book, fly a kite, or spend some quality time with the family!",
+				false
+			)
+		);
 	}
 
 	notes.forEach((note) => {
