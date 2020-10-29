@@ -39,14 +39,18 @@ app.post("/api/notes", (req, res) => {
 		title: req.body.title,
 		text: req.body.text,
 	};
-	fs.appendFile("db/db.json", newNote, (err, data) => {
-		if (err) {
-			throw err;
-		} else {
-			data.push(newNote);
-			res.json(JSON.parse(data));
-		}
-	});
+	// read the db.json file
+	let data = fs.readFileSync("db/db.json");
+	// parse the file to change it from a string to an array
+	let array = JSON.parse(data);
+	// push the new note onto the array of notes
+	array.push(newNote);
+	// turn the data back into an array
+	data = JSON.stringify(array);
+	// write the data to the db.json file
+	fs.writeFileSync("db/db.json", data);
+	// send a response to the server
+	res.send({ msg: "Note saved to the database!" });
 });
 
 app.listen(PORT, () =>
