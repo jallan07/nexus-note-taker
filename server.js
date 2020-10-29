@@ -11,6 +11,7 @@ const PORT = process.env.PORT || 8080;
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+// middleware that ensures the css and jquery code works properly on the site and in the server
 app.use(express.static(__dirname + "/public"));
 
 // GET  `/` - Should return the homepage
