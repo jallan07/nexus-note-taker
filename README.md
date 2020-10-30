@@ -1,83 +1,94 @@
-# Unit 11 Express Homework: Note Taker
-
-## Description
-
-Create an application that can be used to write, save, and delete notes. This application will use an express backend and save and retrieve note data from a JSON file.
-
-- The application frontend has already been created, it's your job to build the backend and connect the two.
-
-- The following HTML routes should be created:
-
-  -[DONE] GET `/notes` - Should return the `notes.html` file.
-
-  -[DONE] GET `*` - Should return the `index.html` file
-
-- The application should have a `db.json` file on the backend that will be used to store and retrieve notes using the `fs` module.
-
-- The following API routes should be created:
-
-  -[DONE] GET `/api/notes` - Should read the `db.json` file and return all saved notes as JSON.
-
-  -[DONE] POST `/api/notes` - Should receive a new note to save on the request body, add it to the `db.json` file, and then return the new note to the client.
-
-  -[DONE] DELETE `/api/notes/:id` - Should receive a query parameter containing the id of a note to delete. This means you'll need to find a way to give each note a unique `id` when it's saved. In order to delete a note, you'll need to read all notes from the `db.json` file, remove the note with the given `id` property, and then rewrite the notes to the `db.json` file.
-
-## User Story
-
-AS A user, I want to be able to write and save notes
-
-I WANT to be able to delete notes I've written before
-
-SO THAT I can organize my thoughts and keep track of tasks I need to complete
-
-## Business Context
-
-For users that need to keep track of a lot of information, it's easy to forget or be unable to recall something important. Being able to take persistent notes allows users to have written information available when needed.
-
-## Acceptance Criteria
-
-Application should allow users to create and save notes.
-
-Application should allow users to view previously saved notes.
-
-Application should allow users to delete previously saved notes.
-
-## Deploying the App
-
-You will not be able to deploy your server side code on GitHub pages. This app should be deployed on Heroku. Carefully follow the [Heroku Guide](../04-Important/HerokuGuide.md) for getting your app deployed on Heroku.
+# **Nexus Notes**
 
 ---
 
-## Commit Early and Often
+## **Description**
 
-One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for two reasons:
-
-- Your commit history is a signal to employers that you are actively working on projects and learning new skills.
-
-- Your commit history allows you to revert your codebase in the event that you need to return to a previous state.
-
-Follow these guidelines for committing:
-
-- Make single-purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits.
-
-- Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history.
-
-- Don't commit half-done work, for the sake of your collaborators (and your future self!).
-
-- Test your application before you commit to ensure functionality at every step in the development process.
-
-We would like you to have well over 200 commits by graduation, so commit early and often!
-
-## Submission on BCS
-
-You are required to submit the following:
-
-- The URL of the deployed application. This should be the link to the url provided by Heroku. Be sure not to submit a link to the Heroku dashboard.
-
-- The URL of the GitHub repository
+Nexus Notes is a powerfully simple web application that allows users to edit, save, and delete notes. It uses express to create and run a server in the background, while storing, calling, and deleting data from the server using GET, POST, and DELETE methods.
 
 ---
 
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+## **Table of Contents**
 
-# nexus-note-taker
+1. [Installation](#Installation)
+2. [Usage](#Usage)
+3. [License](#License)
+4. [Contributions](#Contributions)
+5. [Tests](#Tests)
+6. [Questions](#Questions)
+7. [Author](#Author)
+8. [Screenshots](#Screenshots)
+
+---
+
+## **Installation**
+
+1. Clone the repo: `git clone https://github.com/jallan07/nexus-note-taker.git`
+2. Install NPM packages: `npm i`
+
+   ***
+
+## **Usage**
+
+N/A
+
+---
+
+## **License**
+
+Distributed under the MIT License.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+---
+
+## **Contributions**
+
+**Current Contributors:**
+
+_Josh Allan_
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are greatly appreciated.
+
+1. Fork the Project
+2. Create your Feature Branch (git checkout -b feature/AmazingFeature)
+3. Commit your Changes (git commit -m 'Add some AmazingFeature')
+4. Push to the Branch (git push origin feature/AmazingFeature)
+5. Open a Pull Request
+
+   ***
+
+## **Tests**
+
+This application has been tested in a countless number of different environments to ensure peak performance. However, bugs may exist, especially when used in combination with additional packages. Please be sure to test the application after an initial download.
+
+To test run the code after installing on your local device, use the following code:
+`N/A`
+
+---
+
+## **Questions**
+
+The following questions exist on our end, and are currently trying to be solved:
+
+N/A
+
+---
+
+## **Author**
+
+Below is contact information for the author of this application. Please feel free to reach out directly if additional questions exist.
+
+- Name: Josh Allan
+- Email: allan.josh07@gmail.com
+- LinkedIn: https://www.linkedin.com/in/joshuamallan/
+
+---
+
+## **Screenshots**
+
+Coming soon...
+
+---
+
+### Thank you for using Nexus Notes!
