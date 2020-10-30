@@ -87,7 +87,17 @@ Below is contact information for the author of this application. Please feel fre
 
 ## **Screenshots**
 
-Coming soon...
+### Desktop
+
+![Homepage](img/homepage-desktop.png)
+![Notes With Pending Items](img/notes-list-desktop.png)
+![Notes With Completed Items](img/notes-complete-desktop.png)
+
+### Mobile
+
+![Homepage](img/homepage-mobile.png)
+![Notes With Pending Items](img/notes-list-mobile.png)
+![Notes With Completed Items](img/notes-complete-mobile.png)
 
 ---
 
