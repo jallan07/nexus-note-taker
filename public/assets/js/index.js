@@ -116,7 +116,7 @@ const renderNoteList = (notes) => {
 
 		if (withDeleteButton) {
 			const $delBtn = $(
-				"<i class='fas fa-trash-alt float-right text-danger delete-note'>"
+				"<i class='fas fa-check-square float-right delete-note'></i>"
 			);
 			$li.append($delBtn);
 		}
@@ -124,12 +124,16 @@ const renderNoteList = (notes) => {
 	};
 
 	if (notes.length === 0) {
-		noteListItems.push(
-			create$li(
-				"Congrats—you have a free day. Go read a book, fly a kite, or spend some quality time with the family!",
-				false
-			)
+		// Create the congrats message if they have no pending tasks
+		const congrats = create$li(
+			`Congrats—you have a free day! Go read a book, fly a kite, or spend some quality time with the family.`,
+			false
 		);
+		// push the congrats message to the note list container
+		noteListItems.push(congrats);
+		// set the custom color and font for the congrats message
+		congrats.css("background-color", "#537d8d");
+		congrats.css("font-family", "Oxygen, sans-serif");
 	}
 
 	notes.forEach((note) => {
@@ -154,3 +158,6 @@ $noteText.on("keyup", handleRenderSaveBtn);
 
 // Gets and renders the initial list of notes
 getAndRenderNotes();
+
+// Initialize AOS
+AOS.init();

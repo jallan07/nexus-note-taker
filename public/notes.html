@@ -2,7 +2,10 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+		/>
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<title>nexus</title>
 		<link
@@ -15,17 +18,32 @@
 			integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
 			crossorigin="anonymous"
 		/>
+		<!-- Google Fonts -->
 		<link
 			href="https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap"
 			rel="stylesheet"
 		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Animate on Scroll Library -->
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+		<!-- Custom Styles -->
 		<link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
 	</head>
 
 	<body>
 		<header>
-			<nav class="navbar navbar-dark bg-primary">
-				<a class="navbar-brand" href="/">Nexus</a>
+			<nav class="navbar navbar-dark">
+				<a
+					class="navbar-brand"
+					href="/"
+					data-aos="flip-left"
+					data-aos-duration="1800"
+					daata-aos-easing="ease-in"
+					>Nexus</a
+				>
 				<div class="icons">
 					<i class="fas fa-save text-light save-note"></i>
 					<i class="fas fa-pen text-light new-note"></i>
@@ -55,6 +73,12 @@
 			</div>
 		</div>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 		<script src="/assets/js/index.js"></script>
 	</body>
 </html>

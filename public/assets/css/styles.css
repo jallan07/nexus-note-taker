@@ -5,6 +5,7 @@ body {
 	margin: 0;
 	padding: 0;
 	font-size: 18px;
+	font-family: "Montserrat", sans-serif;
 }
 
 h1 {
@@ -19,10 +20,11 @@ h4 {
 
 /* Header and Nav */
 header {
-	background: #5a3296;
+	background: #5c415d;
 }
 
 nav {
+	background: #5c415d;
 	width: 80%;
 	margin: 0 auto;
 	font-family: "Oxygen", sans-serif;
@@ -30,6 +32,7 @@ nav {
 
 .navbar-brand {
 	font-size: 36px;
+	letter-spacing: 20px;
 }
 
 /* Note Styling */
@@ -94,6 +97,7 @@ nav {
 }
 
 .list-container .list-group-item {
+	background-color: #f55d3e;
 	border-left: none;
 	border-right: none;
 	padding: 20px;
@@ -106,6 +110,10 @@ textarea {
 }
 
 /* Button styling */
+.btn-main {
+	background-color: #537d8d;
+	color: #fff;
+}
 /* Sweep to Right Hover Effect */
 
 .hvr-sweep-to-right {
@@ -134,7 +142,7 @@ textarea {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background: #5a3296;
+	background: #5c415d;
 	-webkit-transform: scaleX(0);
 	transform: scaleX(0);
 	-webkit-transform-origin: 0 50%;
