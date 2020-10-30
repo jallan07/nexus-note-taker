@@ -62,7 +62,7 @@ nav {
 }
 
 .note-title {
-	height: 50px;
+	height: 80px;
 	margin-top: 13px;
 	font-size: 3rem;
 }
@@ -173,5 +173,8 @@ textarea {
 	}
 	h4 {
 		width: 85%;
+	}
+	.note-title {
+		font-size: 1.6rem;
 	}
 }
