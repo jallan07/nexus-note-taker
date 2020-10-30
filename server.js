@@ -86,7 +86,7 @@ app.delete("/api/notes/:id", (req, res) => {
 // GET - If no matching route is found default to home
 // put after all other defined routes so that this didn't overwrite those routes
 app.get("*", function (req, res) {
-	res.sendFile(path.join(__dirname, "../public/home.html"));
+	res.sendFile(path.join(__dirname, "/public/index.html"));
 });
 
 // Listen for the server on our PORT
